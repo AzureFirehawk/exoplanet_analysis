@@ -14,7 +14,9 @@ import pandas as pd
 PARSEC_TO_LY = 3.26156
 COLUMNS_TO_DROP = ["default_flag", "pl_controv_flag", "pl_radelim"]
 
-# cleaning/transformations
+# -----------------------------
+# Cleaning and Aggregation
+# -----------------------------
 def add_distance_ly(df):
   """
   Add distance in light years to dataframe.
@@ -71,7 +73,9 @@ def drop_columns(df):
   df = df.drop(columns=COLUMNS_TO_DROP, errors="ignore")
   return df
 
-# subset creation
+# -----------------------------
+# Subset Creation
+# -----------------------------
 def get_planets_with_distance(df):
   """
   Returns a subset of exoplanets with distance data.
