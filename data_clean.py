@@ -73,6 +73,16 @@ def drop_columns(df):
   df = df.drop(columns=COLUMNS_TO_DROP, errors="ignore")
   return df
 
+def prepare_exoplanet_data(df):
+  """
+  Run necessary data cleaning and aggregation steps.
+  """
+  df = drop_columns(df)
+  df = add_distance_and_uncertainty_ly(df)
+  df = add_radius_uncertainty(df)
+  return df
+
+
 # -----------------------------
 # Subset Creation
 # -----------------------------
@@ -129,9 +139,7 @@ if __name__ == "__main__":
 
     df_raw = load_exoplanet_data()
 
-    df_clean = drop_columns(df_raw)
-    df_clean = add_distance_and_uncertainty_ly(df_clean)
-    df_clean = add_radius_uncertainty(df_clean)
+    df_clean = prepare_exoplanet_data(df_raw)
 
     df_dist_unc = get_planets_with_distance_uncertainty(df_clean)
     df_rad_unc = get_planets_with_radius_uncertainty(df_clean)
