@@ -86,10 +86,10 @@ def categorize_planet_sizes(df):
   radii = df["pl_rade"].dropna().to_numpy()
 
   categories = {
-    "Earth-sized": np.sum(radii < 1.25),
-    "Super-Earth": np.sum((radii >= 1.25) & (radii < 2.0)),
-    "Neptune-like": np.sum((radii >= 2.0) & (radii < 6.0)),
-    "Gas Giant": np.sum(radii >= 6.0)
+    "Earth-sized (< 1.25)": np.sum(radii < 1.25),
+    "Super-Earth (1.25 - 2.0)": np.sum((radii >= 1.25) & (radii < 2.0)),
+    "Neptune-like (2.0 - 6.0)": np.sum((radii >= 2.0) & (radii < 6.0)),
+    "Gas Giant (> 6.0)": np.sum(radii >= 6.0)
   }
 
   return categories
