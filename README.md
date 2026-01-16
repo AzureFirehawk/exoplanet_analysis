@@ -3,9 +3,13 @@
 
 {Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-{Provide a description of the data set that you are analyzing.  Include the link of where you obtained the data.}
+This program analyzes NASA's Exoplanet Archive (link below). The dataset outlines atributes of each planet discovered and their star system, including the planet discovery method, measured mass and radius, distance from earth, and other measurements. 
 
-{Describe your purpose for writing this software to analyze the data.}
+The program is set to answer four main questions about the dataset:
+1. What is the most common discover method?
+2. Is it more common to find closer or more distant planets?
+3. How large are the planets we're discovering?
+4. How has our certainty in measurements changed over time?
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the data set, the questions and answers, the code running and a walkthrough of the code.}
 
