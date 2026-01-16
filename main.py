@@ -39,6 +39,7 @@ def main():
   # ---------------------------------
   print("\nQuestion 1: What is the most common method used to find exoplanets?")
 
+  print("\nDiscovery method statistics:")
   discovery_stats = analyze_discovery_method(df)
   print(discovery_stats.head())
 
@@ -47,6 +48,7 @@ def main():
   # ---------------------------------
   print("\nQuestion 2: Is it more common to find closer or more distant planets?")
 
+  print("\nDistance statistics (light-years):")
   distance_stats = analyze_distance_distribution(df, plot=SHOW_PLOTS)
   for key, value in distance_stats.items():
     print(f"{key}: {value:.2f}")
@@ -62,13 +64,29 @@ def main():
 
   print("\nPlanet size categories:")
   size_categories = categorize_planet_sizes(df)
-  for category, values in size_categories.items():
-    print(f"{category}: {len(values)} planets")
+  for category, count in size_categories.items():
+    print(f"{category}: {count} planets")
 
   # ---------------------------------
   # Question 4: Uncertainty Trends
   # ---------------------------------
+  print("\nQuestion 4: How has our accuracy/uncertainty changed over the years?")
 
+  print("\nDistance uncertainty trends:")
+  dist_unc_trends = analyze_uncertainty_trends(
+    df, 
+    "distance_uncertainty_ly", 
+    plot=SHOW_PLOTS
+  )
+  print(dist_unc_trends)
+
+  print("\nRadius uncertainty trends:")
+  rad_unc_trends = analyze_uncertainty_trends(
+    df, 
+    "radius_uncertainty", 
+    plot=SHOW_PLOTS
+  )
+  print(rad_unc_trends)
 
 if __name__ == "__main__":
   main()
