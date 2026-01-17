@@ -1,7 +1,6 @@
 # exoplanet_analysis
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
 This program analyzes NASA's Exoplanet Archive (link below). The dataset outlines atributes of each planet discovered and their star system, including the planet discovery method, measured mass and radius, distance from earth, and other measurements. 
 
@@ -13,26 +12,31 @@ Exoplanets have always been fascinating to me, and I enjoy learning more about t
 
 # Data Analysis Results
 
-1. What is the most common discover method?
-2. Is it more common to find closer or more distant planets?
-3. How large are the planets we're discovering?
-4. How has our certainty in measurements changed over time?
+Q. What is the most common discover method?
+A. Transit observation
+
+Q. Is it more common to find closer or more distant planets?
+A. Most of the exoplanets we've discovered are relatively close.
+
+Q. How large are the planets we're discovering?
+A. Most exoplanets discovered have been between 2 and 6 times the radius of the Earth
+
+Q. How has our certainty in measurements changed over time?
+A. Uncertainty in exoplanet radius measurements has decreased in, while uncertainty in distance measurements has increased.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+This program was written in VSCode.
 
-{Describe the programming language that you used and any libraries.}
+This software is written in Python, and primarily uses the Pandas library for analysis and data cleaning. It also uses NumPy and matplotlib to perform some aggregation and visualization of data.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS)
-* [Web Site Name](http://url.link.goes.here)
+* [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Find a way to display all visualizations at once.
+* Set up a cleaner output for the data for ease of reading.
+* User interactivity in selecting which area of the data to process and display
