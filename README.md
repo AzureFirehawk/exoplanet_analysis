@@ -6,9 +6,8 @@ This program analyzes NASA's Exoplanet Archive (link below). The dataset outline
 
 Exoplanets have always been fascinating to me, and I enjoy learning more about them. Additionally, building software for data analysis is a skillset I have been wanting to work on developing. This program helps to combine those two passions: an opportunity to learn how to utilize Pandas and NumPy, as well as learning more about exoplanets.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the data set, the questions and answers, the code running and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/FIfc5Yzz-Uo)
 
 # Data Analysis Results
 
