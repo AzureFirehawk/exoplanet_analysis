@@ -46,6 +46,7 @@ def main():
   # ---------------------------------
   print("\nQuestion 1: What is the most common method used to find exoplanets?")
 
+  spinner()
   print("\nDiscovery method statistics:")
   discovery_stats = analyze_discovery_method(df)
   print(discovery_stats.head())
@@ -55,6 +56,7 @@ def main():
   # ---------------------------------
   print("\nQuestion 2: Is it more common to find closer or more distant planets?")
 
+  spinner()
   print("\nDistance statistics (light-years):")
   distance_stats = analyze_distance_distribution(df, plot=SHOW_PLOTS)
   for key, value in distance_stats.items():
@@ -65,6 +67,7 @@ def main():
   # ---------------------------------
   print("\nQuestion 3: How large are the planets we're finding?")
 
+  spinner()
   print("\nPlanet size statistics (Earth radii):")
   size_stats = analyze_planet_sizes(df)
   print(size_stats)
@@ -79,6 +82,7 @@ def main():
   # ---------------------------------
   print("\nQuestion 4: How has our accuracy/uncertainty changed over the years?")
 
+  spinner()
   print("\nDistance uncertainty trends:")
   dist_unc_trends = analyze_uncertainty_trends(
     df, 
