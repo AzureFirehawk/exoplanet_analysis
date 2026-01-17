@@ -12,6 +12,7 @@ Questions:
 -How has our accuracy/uncertainty changed over the years?
 """
 
+# imports
 from data_load import load_exoplanet_data
 from data_clean import prepare_exoplanet_data
 from analysis import (
@@ -21,6 +22,7 @@ from analysis import (
   categorize_planet_sizes,
   analyze_uncertainty_trends
 )
+from spinner import spinner
 
 # configuration
 SHOW_PLOTS = True
@@ -29,10 +31,15 @@ SHOW_PLOTS = True
 def main():
   print("Loading exoplanet data...")
   df_raw = load_exoplanet_data()
+  spinner()
   print("Preparing data for analysis...")
   df = prepare_exoplanet_data(df_raw)
+  spinner()
 
   print(f"Total exoplanets in dataset: {len(df)}")
+
+  print("\nPerforming analysis...")
+  spinner()
 
   # ---------------------------------
   # Question 1: Discovery Methods
