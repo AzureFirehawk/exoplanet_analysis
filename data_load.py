@@ -31,10 +31,16 @@ OPTIONAL_COLUMNS = [
 
 # validation
 def validate_file_exists(filepath):
+  """
+  Check if file exists.
+  """
   if not os.path.exists(filepath):
     raise FileNotFoundError(f"File does not exist: {filepath}")
 
 def validate_columns(df):
+  """
+  Check if required columns are present.
+  """
   missing_required = [col for col in REQUIRED_COLUMNS if col not in df.columns]
   if missing_required:
     raise ValueError(f"Missing required columns: {missing_required}")
@@ -66,6 +72,9 @@ def load_exoplanet_data(filepath=DEFAULT_DATA_PATH):
 
 # inspect
 def print_basic_info(df):
+  """
+  Print basic information about the dataframe.
+  """
   print("Dataset loaded successfully")
   print(f"Number of rows: {df.shape[0]}")
   print(f"Number of columns: {df.shape[1]}")
